@@ -42,7 +42,7 @@ jobs:
         id: push
         uses: docker/build-push-action@v6
         with:
-          file: Dockerfile-alpine
+          file: Dockerfile
           context: .
           push: ${{ github.event_name != 'pull_request' }} # Push on push, don't push on PRs.
           tags: ${{ steps.meta.outputs.tags }}
